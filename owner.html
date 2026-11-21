@@ -1,1 +1,408 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>List Your Hotel | HotelMeHu</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    color: #253647;
+}
+
+header {
+    background: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e8edf1;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #173b57;
+}
+
+.logo span {
+    color: #d49b43;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 22px;
+    font-size: 14px;
+}
+
+.container {
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.intro {
+    margin-bottom: 30px;
+}
+
+.intro h1 {
+    color: #173b57;
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.intro p {
+    color: #71808d;
+    line-height: 1.7;
+}
+
+form {
+    background: white;
+    padding: 35px;
+    border: 1px solid #e6eaf0;
+    border-radius: 10px;
+}
+
+.form-section {
+    margin-bottom: 32px;
+}
+
+.form-section h2 {
+    color: #173b57;
+    font-size: 21px;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #edf0f3;
+}
+
+.field {
+    margin-bottom: 19px;
+}
+
+.field label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 9px;
+}
+
+.field input,
+.field select,
+.field textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #dce2e8;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+.field textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+    outline: none;
+    border-color: #173b57;
+}
+
+.row-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.upload-box {
+    border: 1px dashed #aab8c5;
+    padding: 25px;
+    border-radius: 6px;
+    text-align: center;
+    color: #71808d;
+}
+
+.upload-box input {
+    margin-top: 15px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 5px;
+    background: #173b57;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: #245474;
+}
+
+.note {
+    font-size: 12px;
+    color: #7a8792;
+    text-align: center;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+#success {
+    display: none;
+    background: #e8f5ec;
+    color: #24643b;
+    padding: 18px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+}
+
+footer {
+    background: #173b57;
+    color: white;
+    text-align: center;
+    padding: 35px;
+}
+
+footer p {
+    margin-top: 10px;
+    color: #d7e0e7;
+    font-size: 13px;
+}
+
+@media(max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 7px;
+    }
+
+    .row-fields {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    form {
+        padding: 22px;
+    }
+
+    .intro h1 {
+        font-size: 28px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Hotel<span>Me</span>Hu</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="hotels.html">Find Hotels</a>
+        <a href="owner.html">List Your Hotel</a>
+    </nav>
+</header>
+
+<main class="container">
+
+    <div class="intro">
+        <h1>List Your Available Hotel Rooms</h1>
+        <p>
+            Have vacant rooms in your hotel?
+            Connect with independent investors, negotiate your
+            rental terms and turn unused rooms into revenue.
+        </p>
+    </div>
+
+    <div id="success">
+        Your sample form has been submitted successfully.
+        This is only a demonstration. Your information has not
+        been saved to a database.
+    </div>
+
+    <form id="hotelForm">
+
+        <section class="form-section">
+            <h2>1. Hotel Information</h2>
+
+            <div class="field">
+                <label>Hotel Name *</label>
+                <input type="text" required placeholder="Enter hotel name">
+            </div>
+
+            <div class="field">
+                <label>Hotel Owner's Full Name *</label>
+                <input type="text" required placeholder="Enter owner's name">
+            </div>
+
+            <div class="row-fields">
+                <div class="field">
+                    <label>Mobile Number *</label>
+                    <input type="tel" required placeholder="+91">
+                </div>
+
+                <div class="field">
+                    <label>Email Address *</label>
+                    <input type="email" required placeholder="Enter email">
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Hotel Address *</label>
+                <textarea required placeholder="Complete hotel address"></textarea>
+            </div>
+
+            <div class="row-fields">
+                <div class="field">
+                    <label>City *</label>
+                    <input type="text" required placeholder="City">
+                </div>
+
+                <div class="field">
+                    <label>State *</label>
+                    <input type="text" required placeholder="State">
+                </div>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h2>2. Room Information</h2>
+
+            <div class="field">
+                <label>Room Type *</label>
+                <select required>
+                    <option value="">Select room type</option>
+                    <option>Standard</option>
+                    <option>Deluxe</option>
+                    <option>Premium</option>
+                    <option>Executive</option>
+                    <option>Suite</option>
+                    <option>Other</option>
+                </select>
+            </div>
+
+            <div class="row-fields">
+                <div class="field">
+                    <label>Number of Rooms Available *</label>
+                    <input type="number" min="1" required placeholder="e.g. 5">
+                </div>
+
+                <div class="field">
+                    <label>Maximum Guests Per Room</label>
+                    <input type="number" min="1" placeholder="e.g. 2">
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Room Facilities</label>
+                <textarea placeholder="AC, Wi-Fi, TV, attached bathroom, breakfast etc."></textarea>
+            </div>
+
+            <div class="field">
+                <label>Upload Room Photographs</label>
+                <div class="upload-box">
+                    Upload photographs of your hotel rooms
+                    <br>
+                    <input type="file" accept="image/*" multiple>
+                </div>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h2>3. Rental Terms</h2>
+
+            <div class="field">
+                <label>Rental Price Per Room *</label>
+                <input type="number" min="1" required placeholder="Enter your expected rental price">
+            </div>
+
+            <div class="field">
+                <label>Rental Price Unit *</label>
+                <select required>
+                    <option value="">Select price unit</option>
+                    <option>Per day</option>
+                    <option>Per 10 days</option>
+                    <option>Per 15 days</option>
+                    <option>Per month</option>
+                    <option>Per week</option>
+                    <option>Other / Negotiable</option>
+                </select>
+            </div>
+
+            <div class="row-fields">
+                <div class="field">
+                    <label>Minimum Rental Duration *</label>
+                    <input type="number" min="1" required placeholder="Number of days">
+                </div>
+
+                <div class="field">
+                    <label>Maximum Rental Duration</label>
+                    <input type="number" min="1" placeholder="Number of days">
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Available From *</label>
+                <input type="date" required>
+            </div>
+
+            <div class="field">
+                <label>Additional Rental Conditions</label>
+                <textarea placeholder="Describe your rental conditions and expectations"></textarea>
+            </div>
+        </section>
+
+        <button type="submit" class="submit-btn">
+            Submit Hotel Listing
+        </button>
+
+        <p class="note">
+            Submitting this demonstration form does not publish a listing.
+            Actual registration, verification and database storage will
+            be connected in a later development stage.
+        </p>
+
+    </form>
+
+</main>
+
+<footer>
+    <div class="logo" style="color:white;">HotelMeHu</div>
+    <p>Connecting Hotel Owners and Independent Investors.</p>
+    <p>© 2026 HotelMeHu. All rights reserved.</p>
+</footer>
+
+<script>
+document.getElementById("hotelForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    document.getElementById("success").style.display = "block";
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+</script>
+
+</body>
+</html>
+
