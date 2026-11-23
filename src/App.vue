@@ -6,7 +6,7 @@
       <nav>
         <a href="#how">How It Works</a>
         <a href="#investors">Investors</a>
-        <a href="#hotels">Hotels</a>
+        <a href="hotels.html">Hotels</a>
       </nav>
     </header>
 
