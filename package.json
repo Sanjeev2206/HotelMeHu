@@ -1,3 +1,4 @@
+
 {
   "name": "hotelmehu",
   "private": true,
@@ -9,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.0.0",
     "vue": "^3.5.0"
   },
   "devDependencies": {
