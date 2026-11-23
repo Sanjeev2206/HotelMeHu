@@ -5,7 +5,7 @@
       <div class="logo">Hotel<span>Me</span>Hu</div>
       <nav>
         <a href="#how">How It Works</a>
-        <a href="#investors">Investors</a>
+        <a href="investor.html">Investors</a>
         <a href="hotels.html">Hotels</a>
       </nav>
     </header>
